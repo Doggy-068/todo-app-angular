@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "deploy": "ng build --base-href=/todo-app-angular/ && gh-pages -d dist",
+    "deploy": "ng build --base-href=/todo-app-angular/ && gh-pages -d dist/todo-app",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
