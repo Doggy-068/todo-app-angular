@@ -6,6 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy": "ng build --base-href=/todo-app-angular/ && gh-pages -d dist",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -34,6 +35,7 @@
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
     "@types/jasmine": "~4.3.0",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
