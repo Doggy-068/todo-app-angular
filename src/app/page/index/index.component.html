@@ -1,0 +1,23 @@
+<mat-sidenav-container class="page-index">
+  <mat-sidenav mode="over" [(opened)]="sidenavOpened">
+    <mat-list role="list">
+      <mat-list-item>{{'index.navigation'|translate}}</mat-list-item>
+      <mat-divider />
+      <mat-list-item *ngFor="let navigation of navigations">
+        <div (click)="onListItemClick(navigation.path)" style="display: flex; align-items: center" [style.color]="router.url === navigation.path? 'var(--mat-select-focused-arrow-color)': ''">
+          <mat-icon>{{navigation.icon}}</mat-icon>
+          <span style="margin-left: 0.5em">{{navigation.i18n|translate}}</span>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="onToolbarIconClick()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Todo Application</span>
+    </mat-toolbar>
+    <router-outlet />
+  </mat-sidenav-content>
+</mat-sidenav-container>
