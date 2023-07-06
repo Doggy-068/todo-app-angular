@@ -1,0 +1,30 @@
+{
+  "detail": {
+    "detail": "详情",
+    "title": "标题：",
+    "type": "类型：",
+    "startTime": "日期：",
+    "content": "内容：",
+    "delete": "删除",
+    "edit": "编辑"
+  },
+  "edit": {
+    "edit": "编辑",
+    "title": "标题：",
+    "type": "类型：",
+    "startTime": "日期：",
+    "content": "内容：",
+    "save": "保存"
+  },
+  "index": {
+    "navigation": "导航",
+    "home": "主页",
+    "setting": "设置",
+    "_view": {
+      "setting": {
+        "language": "语言",
+        "theme": "主题"
+      }
+    }
+  }
+}

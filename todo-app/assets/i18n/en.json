@@ -1,0 +1,30 @@
+{
+  "detail": {
+    "detail": "Detail",
+    "title": "Title: ",
+    "type": "Type: ",
+    "startTime": "StartTime: ",
+    "content": "Content: ",
+    "delete": "Delete",
+    "edit": "Edit"
+  },
+  "edit": {
+    "edit": "Edit",
+    "title": "Title: ",
+    "type": "Type: ",
+    "startTime": "StartTime: ",
+    "content": "Content: ",
+    "save": "Save"
+  },
+  "index": {
+    "navigation": "Navigation",
+    "home": "Home",
+    "setting": "Setting",
+    "_view": {
+      "setting": {
+        "language": "Language",
+        "theme": "Theme"
+      }
+    }
+  }
+}
