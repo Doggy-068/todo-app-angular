@@ -25,5 +25,9 @@ export class ViewSettingComponent {
 
   onLocaleItemClick = (val: string) => this.translateService.use(val)
 
-  onThemeItemClick = (val: string) => (document.getElementById('style-manager-theme') as HTMLLinkElement).href = val
+  onThemeItemClick = (val: string) => {
+    fetch(val).then(() => {
+      (document.getElementById('style-manager-theme') as HTMLLinkElement).href = val
+    })
+  }
 }

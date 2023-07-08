@@ -28,6 +28,6 @@
     <textarea matInput [formControl]="contentControl"></textarea>
   </mat-form-field>
   <div style="display: flex; justify-content: flex-end">
-    <button mat-raised-button color="primary">{{'edit.save'|translate}}</button>
+    <button mat-raised-button color="primary" (click)="onSaveClick()">{{'edit.save'|translate}}</button>
   </div>
 </div>

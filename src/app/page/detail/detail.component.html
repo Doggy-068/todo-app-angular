@@ -4,25 +4,27 @@
   </button>
   <span>{{'detail.detail'|translate}}</span>
 </mat-toolbar>
-<mat-list>
-  <mat-list-item>
-    <span matListItemTitle>{{'detail.title'|translate}}</span>
-    <span matListItemLine>{{todo.title}}</span>
-  </mat-list-item>
-  <mat-list-item>
-    <span matListItemTitle>{{'detail.type'|translate}}</span>
-    <span matListItemLine>{{todo.color}}</span>
-  </mat-list-item>
-  <mat-list-item>
-    <span matListItemTitle>{{'detail.startTime'|translate}}</span>
-    <span matListItemLine>{{todo.startTime}}</span>
-  </mat-list-item>
-  <mat-list-item>
-    <span matListItemTitle>{{'detail.content'|translate}}</span>
-    <span matListItemLine>{{todo.content}}</span>
-  </mat-list-item>
-</mat-list>
-<div style="padding: 8px 16px; display: flex; justify-content: flex-end">
-  <button mat-raised-button color="warn">{{'detail.delete'|translate}}</button>
-  <button mat-raised-button style="margin-left: 1em" color="primary" (click)="onEditButtonClick()">{{'detail.edit'|translate}}</button>
+<div *ngIf="todo">
+  <mat-list>
+    <mat-list-item>
+      <span matListItemTitle>{{'detail.title'|translate}}</span>
+      <span matListItemLine>{{todo.title}}</span>
+    </mat-list-item>
+    <mat-list-item>
+      <span matListItemTitle>{{'detail.type'|translate}}</span>
+      <span matListItemLine>{{todo.color}}</span>
+    </mat-list-item>
+    <mat-list-item>
+      <span matListItemTitle>{{'detail.startTime'|translate}}</span>
+      <span matListItemLine>{{todo.startTime}}</span>
+    </mat-list-item>
+    <mat-list-item>
+      <span matListItemTitle>{{'detail.content'|translate}}</span>
+      <span matListItemLine>{{todo.content}}</span>
+    </mat-list-item>
+  </mat-list>
+  <div style="padding: 8px 16px; display: flex; justify-content: flex-end">
+    <button mat-raised-button color="warn" (click)="onDeleteButtonClick()">{{'detail.delete'|translate}}</button>
+    <button mat-raised-button style="margin-left: 1em" color="primary" (click)="onEditButtonClick()">{{'detail.edit'|translate}}</button>
+  </div>
 </div>

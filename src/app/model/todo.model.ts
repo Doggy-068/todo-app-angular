@@ -5,11 +5,13 @@ export enum TodoModelType {
 }
 
 export class TodoModel {
-  id: number = -1
-  title: string = 'Item'
-  type: TodoModelType = TodoModelType.GREEN
-  startTime: string = '2023-01-01'
-  content: string = 'This is a message!'
+  constructor(
+    public id: number,
+    public title: string,
+    public type: TodoModelType,
+    public startTime: string,
+    public content: string
+  ) { }
 
   get color() {
     switch (this.type) {

@@ -1,10 +1,13 @@
 <div style="padding: 1em">
+  <button mat-fab (click)="onAddButtonClick()" color="primary" style="position: fixed; bottom: 1em; right: 1em">
+    <mat-icon>add</mat-icon>
+  </button>
   <mat-list>
-    <mat-card *ngFor="let item of list" class="list-item-card" (click)="onListItemClick()">
+    <mat-card *ngFor="let item of list" class="list-item-card" (click)="onListItemClick(item.id)">
       <mat-card-header>
         <mat-card-title>{{item.title}}</mat-card-title>
       </mat-card-header>
-      <mat-card-content [style.color]="item.color">{{item.startTime}}</mat-card-content>
+      <mat-card-content [style.color]="item.color">{{item.startTime|date}}</mat-card-content>
       <mat-card-content>{{item.content}}</mat-card-content>
     </mat-card>
   </mat-list>
