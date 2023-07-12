@@ -28,8 +28,7 @@ import { ActivatedRoute } from '@angular/router'
     MatSelectModule
   ],
   providers: [EditService],
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.scss']
+  templateUrl: './edit.component.html'
 })
 export class PageEditComponent {
   route: ActivatedRoute = inject(ActivatedRoute)

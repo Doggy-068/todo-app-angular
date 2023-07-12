@@ -21,8 +21,7 @@ import { DetailService } from './detail.service'
     MatIconModule
   ],
   providers: [DetailService],
-  templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.scss']
+  templateUrl: './detail.component.html'
 })
 export class PageDetailComponent {
   route = inject(ActivatedRoute)

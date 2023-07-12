@@ -19,8 +19,18 @@
   "index": {
     "navigation": "Navigation",
     "home": "Home",
+    "daily": "Daily",
     "setting": "Setting",
     "_view": {
+      "daily": {
+        "_component": {
+          "editGroupDialog": {
+            "name": "Name: ",
+            "title": "Title: ",
+            "save": "Save"
+          }
+        }
+      },
       "setting": {
         "language": "Language",
         "theme": "Theme"

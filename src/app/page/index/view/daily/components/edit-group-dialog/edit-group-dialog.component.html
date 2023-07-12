@@ -1,0 +1,19 @@
+<div mat-dialog-content style="padding-top: 2em">
+  <mat-form-field appearance="outline" style="width: 100%">
+    <mat-label>{{'index._view.daily._component.editGroupDialog.name'|translate}}</mat-label>
+    <input matInput [formControl]="nameControl" />
+    <button matSuffix mat-icon-button (click)="onAddButtonClick()">
+      <mat-icon>add_circle_outline_icon</mat-icon>
+    </button>
+  </mat-form-field>
+  <mat-form-field *ngFor="let item of items; index as idx" appearance="outline" style="width: 100%">
+    <mat-label>{{'index._view.daily._component.editGroupDialog.title'|translate}}</mat-label>
+    <input matInput [formControl]="item" />
+    <button matSuffix mat-icon-button (click)="onRemoveButtonClick(idx)">
+      <mat-icon>remove_circle_outline_icon</mat-icon>
+    </button>
+  </mat-form-field>
+  <div style="display: flex; justify-content: flex-end">
+    <button (click)="onSaveButtonClick()" mat-raised-button color="primary">{{'index._view.daily._component.editGroupDialog.save'|translate}}</button>
+  </div>
+</div>

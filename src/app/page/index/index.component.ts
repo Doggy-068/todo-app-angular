@@ -34,6 +34,7 @@ export class PageIndexComponent {
 
   navigations: { path: string, i18n: string, icon: string }[] = [
     { path: '/index/home', i18n: 'index.home', icon: 'home' },
+    { path: '/index/daily', i18n: 'index.daily', icon: 'format_list_numbered_icon' },
     { path: '/index/setting', i18n: 'index.setting', icon: 'settings' }
   ]
 
