@@ -12,12 +12,14 @@
     </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar #toolbar color="primary">
       <button mat-icon-button (click)="onToolbarIconClick()">
         <mat-icon>menu</mat-icon>
       </button>
       <span>Todo Application</span>
     </mat-toolbar>
-    <router-outlet />
+    <div #content>
+      <router-outlet />
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
