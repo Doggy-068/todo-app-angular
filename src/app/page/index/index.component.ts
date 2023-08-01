@@ -57,6 +57,7 @@ export class PageIndexComponent implements AfterViewInit, OnDestroy {
     { path: '/index/home', i18n: 'index.home', icon: 'home' },
     { path: '/index/daily', i18n: 'index.daily', icon: 'format_list_numbered_icon' },
     { path: '/index/three', i18n: 'index.three', icon: 'view_in_ar_icon' },
+    { path: '/index/map', i18n: 'index.map', icon: 'map' },
     { path: '/index/setting', i18n: 'index.setting', icon: 'settings' }
   ]
 
