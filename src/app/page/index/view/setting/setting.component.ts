@@ -4,7 +4,8 @@ import { MatDividerModule } from '@angular/material/divider'
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon'
 import { MatMenuModule } from '@angular/material/menu'
-import { TranslateModule, TranslateService } from '@ngx-translate/core'
+import { TranslateModule } from '@ngx-translate/core'
+import { AppService } from '../../../../app.service'
 
 @Component({
   standalone: true,
@@ -17,13 +18,14 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core'
     MatIconModule,
     MatMenuModule
   ],
+  providers: [AppService],
   templateUrl: './setting.component.html',
   styleUrls: ['./setting.component.scss']
 })
 export class ViewSettingComponent {
-  constructor(private translateService: TranslateService) { }
+  constructor(private appService: AppService) { }
 
-  onLocaleItemClick = (val: string) => this.translateService.use(val)
+  onLocaleItemClick = (locale: string) => this.appService.setLocale(locale)
 
   onThemeItemClick = (val: string) => {
     fetch(val).then(() => {
