@@ -1,13 +1,19 @@
 import { Component } from '@angular/core'
-import { AppService } from './app.service'
 
 @Component({
   selector: 'app-root',
-  providers: [AppService],
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private appService: AppService) {
-    this.appService.setLocale(this.appService.getLocale())
-  }
+
+  menus = [
+    { label: '消息' },
+    { label: '视频会议' },
+    { label: '日历' },
+    { label: '云文档' },
+    { label: '多维表格' },
+    { label: '工作台' },
+    { label: '通讯录' }
+  ]
 }

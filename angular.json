@@ -30,26 +30,11 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/favicon.ico"
             ],
             "styles": [
-              {
-                "input": "@angular/material/prebuilt-themes/deeppurple-amber.css",
-                "inject": false
-              },
-              {
-                "input": "@angular/material/prebuilt-themes/indigo-pink.css",
-                "inject": false
-              },
-              {
-                "input": "@angular/material/prebuilt-themes/pink-bluegrey.css",
-                "inject": false
-              },
-              {
-                "input": "@angular/material/prebuilt-themes/purple-green.css",
-                "inject": false
-              },
+              "node_modules/ng-devui/devui.min.css",
+              "node_modules/@devui-design/icons/icomoon/devui-icon.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -107,26 +92,11 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/favicon.ico"
             ],
             "styles": [
-              {
-                "input": "@angular/material/prebuilt-themes/deeppurple-amber.css",
-                "inject": false
-              },
-              {
-                "input": "@angular/material/prebuilt-themes/indigo-pink.css",
-                "inject": false
-              },
-              {
-                "input": "@angular/material/prebuilt-themes/pink-bluegrey.css",
-                "inject": false
-              },
-              {
-                "input": "@angular/material/prebuilt-themes/purple-green.css",
-                "inject": false
-              },
+              "node_modules/ng-devui/devui.min.css",
+              "node_modules/@devui-design/icons/icomoon/devui-icon.css",
               "src/styles.scss"
             ],
             "scripts": []
