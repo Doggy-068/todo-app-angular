@@ -1,0 +1,48 @@
+<div style="width: 30%; min-width: 300px; max-width: 360px; flex-shrink: 0; display: flex; flex-direction: column; height: 100%">
+  <div style="display: flex; align-items: center; flex-shrink: 0; padding: 0 1em 0.5em">
+    <d-icon icon="icon-list-view" />
+    <span style="margin-left: 0.5em">消息</span>
+  </div>
+  <div style="height: 100%; overflow: auto">
+    <div *ngFor="let item of list" class="list-item" [class.current]="item.key === currentItemKey" (click)="handleListItemClick(item.key)" style="display: flex; padding: 1em">
+      <d-badge *ngIf="item.unread > 0; else pureAvatar" style="flex-shrink: 0" status="danger" [showDot]="true">
+        <d-avatar />
+      </d-badge>
+      <ng-template #pureAvatar>
+        <d-avatar />
+      </ng-template>
+      <div style="margin: 0 1em; width: 100%; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden">
+        <span class="g-text" style="font-weight: bold; width: 100%; overflow: hidden; text-overflow: ellipsis">{{item.name}}</span>
+        <div class="g-text-weak" style="display: flex; align-items: center; width: 100%; overflow: hidden; text-overflow: ellipsis">
+          <d-icon *ngIf="item.isOtherRead" class="text-icon" icon="icon-right-o" />
+          <span>{{item.message}}</span>
+        </div>
+      </div>
+      <span style="flex-shrink: 0">{{item.date}}</span>
+    </div>
+  </div>
+</div>
+<div style="width: 100%; height: 100%; display: flex; flex-direction: column">
+  <div style="box-sizing: border-box; width: 100%; display: flex; align-items: center; flex-shrink: 0; padding: 0 1em">
+    <div style="display: flex; align-items: center; width: 100%">
+      <d-avatar [width]="42" [height]="42" />
+      <span style="font-size: large; font-weight: bold; margin-left: 0.5em">xxxxx</span>
+    </div>
+    <div style="display: flex; align-items: center; flex-shrink: 0; column-gap: 1em">
+      <d-icon icon="icon-search" style="cursor: pointer" />
+      <d-icon icon="icon-start-use" style="cursor: pointer" />
+      <d-icon icon="icon-setup" style="cursor: pointer" />
+    </div>
+  </div>
+  <div style="box-sizing: border-box; width: 100%; height: 100%; display: flex; flex-direction: column; padding: 0 1em">
+    <div style="box-sizing: border-box; height: 100%; overflow: auto; padding-top: 1em; display: flex; flex-direction: column">
+      <div *ngFor="let item of chatList" style="display: flex; width: 85%; margin-bottom: 1em" [style.flexDirection]="item.isSend ? 'row-reverse' : 'row'" [style.alignSelf]="item.isSend ? 'end' : 'start'">
+        <d-avatar />
+        <div [innerHTML]="item.content" style="border: 1px solid #eeeeee; border-radius: 4px; height: fit-content; padding: 0.5em; margin: 0 1em; word-break: break-all"></div>
+      </div>
+    </div>
+    <div style="height: 100px; flex-shrink: 0">
+      <textarea dTextarea placeholder="发送给" style="height: 100%"></textarea>
+    </div>
+  </div>
+</div>

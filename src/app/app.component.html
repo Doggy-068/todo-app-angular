@@ -1,13 +1,22 @@
-<div style="box-sizing: border-box; width: 200px; padding: 0.5em; flex-shrink: 0; display: flex; flex-direction: column">
+<div style="box-sizing: border-box; width: 200px; flex-shrink: 0; display: flex; flex-direction: column">
   <div style="flex-shrink: 0">
     <div style="display: flex; align-items: center; justify-content: space-between">
       <d-avatar />
       <d-icon icon="icon-add-2" />
     </div>
-    <input dTextInput placeholder="搜索" style="margin: 0.5em 0" />
+    <d-search style="margin: 0.5em 0" iconPosition="left" placeholder="搜索" />
   </div>
   <div style="height: 100%; overflow: auto">
-    <div *ngFor="let menu of menus" class="menu-item">{{menu.label}}</div>
+    <div *ngFor="let menu of menus" class="menu-item" [class.active]="router.url === menu.path" (click)="onMenuItemClick(menu.path)">
+      <span>{{menu.label}}</span>
+    </div>
+    <div style="border-bottom: 1px solid #eeeeee"></div>
+    <div *ngFor="let menu of menusOptional; let i = index;" class="menu-item" [class.active]="router.url === menu.path" (click)="onMenuItemClick(menu.path)">
+      <span style="width: 100%">{{menu.label}}</span>
+      <d-icon (click)="onMenuOptionalCloseClick($event, i)" icon="icon-close" style="flex-shrink: 0" />
+    </div>
   </div>
 </div>
-<div style="width: 100%; height: 100%"></div>
+<div style="width: 100%; height: 100%">
+  <router-outlet />
+</div>
